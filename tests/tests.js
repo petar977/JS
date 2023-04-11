@@ -1,0 +1,39 @@
+describe("compare() function", function () {
+ 
+    //Spec for comparing two numbers, when second number is greater 
+    it("should be able to compare two numbers, when second number is greater", function () {
+     
+    expect(compare(5, 8)).toEqual(-1); 
+    });
+     
+    //Spec for comparing two numbers, when first is greater 
+    it("should be able to compare two numbers, when first number is greater", function () {
+     
+    expect(compare(8, 5)).toEqual(1); 
+    });
+     
+    //Spec for comparing two numbers in string form 
+     
+    it("should be able to compare two numbers in string form", function () { 
+    expect(compare('8', '5')).toEqual(1); 
+    });
+     
+     
+    //Spec for comparing two numbers when one is negative 
+    it("should be able to compare two numbers, when one is negative", function () { 
+    expect(compare(-8, 5)).toEqual(-1); 
+    });
+     
+    //Spec for comparing two equal numbers 
+    it("should be able to compare two equal numbers", function () { 
+    expect(compare(5, 5)).toEqual(0); 
+    });
+     
+    });
+
+    it("should be able to throw error when one or both of values can't be converted to number", function () { 
+    expect(function () { compare('sgrberh', 5)         
+    }).toThrowError(TypeError); 
+    });
+        
+    
